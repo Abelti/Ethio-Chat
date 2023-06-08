@@ -1,34 +1,50 @@
 import React from 'react';
+import logpic from '../assets/chat.jpg'
 
 export  function RegisterComponent () {
     return (
-        <>
-        <h1>Register</h1>
-        <div className='register-form'>
-            <div className='user-side-bar'>
-                <img className='user-avatar' alt='userPhoto'></img>
-                <h1>Ethio-Chat</h1>
-                <button className='login-btn'>Login</button>
+        <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
+            <div className='hidden sm:block'>
+                <img className='w-full h-screen object-cover' src={logpic} alt="" />
             </div>
-            <hr/>
-            <div className='user-info'>
-                <label>First Name</label>
-                <input type='text'></input>
-                <label>Last Name</label>
-                <input type='text'></input>
-                <label>User Name</label>
-                <input type='text'></input>
-                <label>Phone Number</label>
-                <input type='number'></input>
-                <label>Email</label>
-                <input type='text'></input>
-                <label>Password</label>
-                <input type='password'></input>
-                <label>Confirm Password</label>
-                <input type='password'></input>
-                <button type='submit'>REGISTER</button>
+            <div className='bg-gray-800 flex flex-col justify-center'>
+                <form className='max-h[screen] w-full mx-auto bg-gray-900  px-8 rounded-lg'>
+                    <h2 className='text-4xl dark:text-white font-bold text-center'>REGISTER</h2>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>First Name</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none' type="text" />
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>Last Name</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none' type="text" />
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>User Name</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none' type="text" />
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>Phone Number</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none' type="text" />
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>Email</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none' type="text" />
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>Password</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none ' type="password"/>
+                    </div>
+                    <div className='flex flex-col text-gray-400 py-1'>
+                        <label>Confirm Password</label>
+                        <input className='rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus outline-none ' type="password"/>
+                    </div>
+                    <div className='flex justify-between text-gray-400 py-2'>
+                        <p className='flex items-center'><input className='mr-2' type="checkbox" /> Remember Me</p>
+                        <p className='hover:shadow-teal-500'>Forget Password</p>
+                    </div>
+                    <button className='w-full my-5 py-2 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>LogIn</button>
+                </form>
             </div>
         </div>
-        </>
-    );
+    )
 };

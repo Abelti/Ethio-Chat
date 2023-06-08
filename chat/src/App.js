@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Routes, Route, Link, HashRouter as Hash} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {RegisterComponent} from "./components/Register.jsx"
 import {LoginComponent} from './components/Login';
 import {HomeComponent} from './components/Home';
